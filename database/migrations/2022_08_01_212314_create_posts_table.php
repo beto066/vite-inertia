@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('posts', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('user_id')->references('id')->on('users')->cascadeOnDelete();
+            $table->bigIncrements('id_post');
+            $table->foreignId('id_user')->references('id_user')->on('users')->cascadeOnDelete();
             $table->string('title');
             $table->longText('content');
             $table->boolean('published');

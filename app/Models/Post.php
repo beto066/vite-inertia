@@ -14,11 +14,14 @@ class Post extends Model
      */
     protected $table = 'posts';
 
+    protected $primaryKey = 'id_post';
+
     /**
      * @var string[] indica os nomes dos atributos
      */
     protected $fillable = [
-        'user_id',
+        'id_post',
+        'id_user',
         'title',
         'content',
         'published',
